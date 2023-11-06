@@ -108,7 +108,7 @@ section {
 }
 
 .about-me-title {
-    display: flex;
+    display: column;
     font-size: 50px;
     color: white;
     order: -1;
@@ -132,6 +132,7 @@ section {
     display: flex;
 }
 /* Projects  */
+
 .projects-container {
     display: flex;
     flex-direction: row;
@@ -140,52 +141,156 @@ section {
     align-items: center;
     height: 100vh;
     background-color: pink;
+    gap: 20px;
+    border: 3px solid green;
+    padding: 0 15px;
+  
 
 }
 .flex-item {
     display: flex;
+    justify-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 3px dashed white; 
+    padding: 2px;
+    flex: 1 0 400px;
+    justify-content: center;
+    margin: auto; 
     font-size: 40px;
+    
     /* flex: 100%; */
 }
 
-.project-one {
+.project-one-two {
     background-color: green;
-    height: 400px;
-    width: 1000px;
+    /* height: 300px;
+    width: 500px; */
 }
-.project-two {
+.project-one-two {
     background-color: orange;
-    height: 400px;
-    width: 500px;
+ 
 }
+
+.project-one, .project-two {
+    display: flex;
+    flex: 1 0 450px;
+    height: 400px;  
+}
+
+.project-three, .project-four, .project-five{
+    height: 300px;
+    flex: 1 0 200px;
+    width: 200px;
+}
+
 .project-three {
     background-color: red;
-    height: 400px;
-    width: 500px;
+  
 }
 .project-four {
     background-color: maroon;
-    height: 400px;
-    width: 400px;
+  
+}
+.project-five {
+    background-color: purple ;
+}
+.project-six {
+    background-color: rgb(84, 84, 230) ;
+}
+
+.image {
+    display: flex;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    align-items: center;
+    margin: auto;
+    white-space: normal;
+    overflow: hidden;
+
+}
+
+.horiseon, .snippet {
+    height:370px;
+    width: 515px;
+}
+
+.landing-page {
+    height:285px;
+    width: 340px;
 }
 
 
+
+
+
+/* .image-project-1-2 {
+    display: flex;
+    height: 300px; 
+    width: 480px;
+    flex-shrink: 1;
+} */
+
+
+IMPORTANT 
 /* screen sizes--------------------------------- */
 /* Tablets */
 @media screen and (max-width:992px){
     .about-me {
-        padding: 0 20px ;
+        padding: 0 20px;
+    } 
+     /* projects */
+    .projects-container {
+        padding: 0 30px;
+        width: 350px;
+        gap: 7px;
     }
+    .project-one, .project-two {
+        height: 400px;
+        /* width: 500px; */
+        flex-grow: 1;
+    }
+    
+    .project-three, .project-four, .project-five, {
+        height: 350px;
+        flex-grow: 1;
+        /* width: 400px; */
+    }
+      /* project-images */
+  
+    .horiseon, .snippet {
+        height: 380px;
+        width: 370px; 
+    }
+ 
 }
 
-/* large smarthphones */
+/* large smarthphones -pad mini*/
 @media screen and (max-width:768px){
-    /* .container {
-        width: 70%;
-    } */
-    /* .name-quote{
-        font-size: 45px;
-    } */
+    .projects-container {
+        padding: 0 30px;
+        gap: 5px;
+    }
+    .flex-item .project-one-two {
+        width: 300px;
+    }
+    .project-one, .project-two {
+        height: 340px;
+        /* width: 500px; */
+       
+    }
+    
+    .project-three, .project-four, .project-five, .project-six {
+        height: 250px;
+        flex-grow: 1;
+        /* width: 400px; */
+    }
+      /* project-images */
+  
+    .horiseon, .snippet {
+        height: 320px;
+        width: 400px; 
+    }
 }
 
 /* small smarthphones */
@@ -209,10 +314,37 @@ section {
     }
     /* about me */
     .about-me p{
-        font-size: 25px;
+        font-size: 18px;
     }
     .about-me li {
-        font-size: 20px;
+        font-size: 15px;
     }
-    
+    /* projects */
+    .projects-container {
+        gap: 1px;     
+    }
+    .project-one, .project-two {
+        display: flex;
+        flex: 1 0 200px;
+        height: 122px;  
+        /* height: 150px;
+        width: 200px; */
+        /* height: 100px;
+        width: 300px; */
+    }
+
+    .project-three, .project-four, .project-five {
+        display: flex;
+        flex: 1 0 200px;
+        height: 120px; 
+        /* height: 150px;
+        width: 300px; */
+    }
+
+    /* project-images */
+    .horiseon, .snippet {
+        height: 115px;
+        width: 300px; 
+    }
+ 
 }
