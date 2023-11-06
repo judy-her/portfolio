@@ -132,8 +132,42 @@ section {
     display: flex;
 }
 /* Projects  */
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+    background-color: pink;
 
+}
+.flex-item {
+    display: flex;
+    font-size: 40px;
+    /* flex: 100%; */
+}
 
+.project-one {
+    background-color: green;
+    height: 400px;
+    width: 1000px;
+}
+.project-two {
+    background-color: orange;
+    height: 400px;
+    width: 500px;
+}
+.project-three {
+    background-color: red;
+    height: 400px;
+    width: 500px;
+}
+.project-four {
+    background-color: maroon;
+    height: 400px;
+    width: 400px;
+}
 
 
 /* screen sizes--------------------------------- */
