@@ -26,6 +26,7 @@ nav {
     width: 100%;
     height: 50px;
     background: var(--linear-gradient);   
+    overflow: hidden;
 }
 
 .nav-item {
@@ -180,13 +181,7 @@ section {
     padding: 2px;
     flex: 1 0 500px;
     justify-content: center;
-    background-color: orange;
-
-    /* flex: 1 0 480px;
-    flex-direction: column;
-    height: 370px;
-    background-color: orange; */
- 
+    background-color: orange; 
 }
 
 
@@ -250,22 +245,66 @@ section {
     padding-left: 5px;
     text-align: left;
 }
-    
-
-
-
 .image-project-1-2 {
     display: flex;
     flex-direction: column;
     position: absolute;
     height: 350px; 
     width: 500px;
-    flex-shrink: 1;
-    border: 2px solid green; 
+    border: 2px solid yellow; 
+}   
+/* CONTACT ME SECTION-------------------- */
+.contact-me-container {
+    display: flex;
+    height:100vh;
+    background-color: pink;
 }
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    font-family: var(--main-font-family);
+    height: 70vh;
+    width: 925px;
+    margin: auto;
+    padding-bottom: 1px;
+  }
+.button-box {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding-top: 70px;
+    width: 220px;
+    margin: auto;
+}
+  .btn  {
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: var(--main-font-family);
+   
+  }
+
+  /* FOOTER SECTION ------------------------ */
 
 
-IMPORTANT 
+
+/* .image-project-1-2 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 350px; 
+    width: 500px;
+    flex-shrink: 1;
+    border: 2px solid yellow; 
+} */
+
+
+IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT 
 /* screen sizes--------------------------------- */
 /* desktop */
 @media screen and (max-width: 1200px){
@@ -285,29 +324,7 @@ IMPORTANT
      .projects-container {
         gap: 1px;     
     }
-    .project-one-two-box {
-        display: flex;
-        flex: 0 0 200px;
-        height: 122px;  
-        /* height: 150px;
-        width: 200px; */
-        /* height: 100px;
-        width: 300px; */
-    }
-
-    .project-3-5-box {
-        display: flex;
-        flex: 0 0 100px;
-        height: 120px; 
-        /* height: 150px;
-        width: 300px; */
-    }
-
-    /* project-images */
-    .horiseon, .snippet, .landing-page, .coming-soon {
-        height: 115px;
-        width: 300px; 
-    }
+    
     
 }
 
@@ -319,9 +336,12 @@ IMPORTANT
 /* small smarthphones */
 @media screen and (max-width:576px){
     nav {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 20px;
+        position: fixed;
         width: 100%;
-        height: 40px;
-        padding-left: 20px;     
+        height: 40px; 
     }
     .container {
         width: 100%;
@@ -348,56 +368,61 @@ IMPORTANT
     .about-me li {
         font-size: 23px;
     }
-    section {
-        background-color: rgb(72, 2, 72);
-        align-items: center;
-        display: flex;
+
+    .about-me{
+        border: 2px solid blue;
         flex-direction: column;
-        gap: 100px;
-        height: 100vh;
-        border: 2px solid rgb(128, 18, 18);   
     }
+ 
     /* projects -----------------------*/
     /* .projects-container {
         gap: 1px;     
     } */
     .projects-container {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content:center;
         align-items: center;
         height: 100vh;
         background-color: pink;
-        gap: 5px;
+        gap: 1px;
         border: 3px solid green;
-        padding: 0 15px;
-    }
-    .project-one-two-box {
-        display: flex;
-        flex: 1 0 250px;
       
-        /* flex: 1 0 200px; */
-        height: 122px;  
-        /* height: 150px;
-        width: 200px; */
-        /* height: 100px;
-        width: 300px; */
     }
-
-    .project-3-5-box {
-        display: flex;
-        flex: 1 0 150px;
-        /* flex: 1 0 200px; */
-        height: 120px; 
-       
-        /* height: 150px;
-        width: 300px; */
-    }
-
     /* project-images */
-    .horiseon, .snippet, .landing-page, .coming-soon {
-        height: 115px;
+    .landing-page, .coming-soon {
+        height: 90px;
         width: 300px; 
     }
- 
+    .horiseon, .snippet{
+        height: 170px;
+        width: 300px; 
+    }
+
+     .project-one-two-box {
+        /* display: flex;
+        flex-direction: column;
+        align-items: center; */
+        border: 3px dashed white; 
+        height: 100px;
+        padding: 2px;
+        flex: 1 0 100px;
+        justify-content: center;
+        background-color: orange; 
+     }
+    
+    .project-3-5-box{
+        flex:  0 1 100px;
+        height: 90px;
+        background-color: red;
+    }
+    .image-project-1-2 {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        height: 170px; 
+        width: 300px;
+        border: 2px solid yellow; 
+    }   
+    
 }
