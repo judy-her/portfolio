@@ -291,7 +291,18 @@ section {
 
   /* FOOTER SECTION ------------------------ */
 
+.footer-box {
+    display: flex;
+    background-color:purple;
+    height: 10vh;
+    width: 100%;
+    margin: auto;
+}
 
+.footer {
+    color: white;
+    margin: auto;
+}
 
 /* .image-project-1-2 {
     display: flex;
