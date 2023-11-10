@@ -5,8 +5,7 @@
 *, body {
     box-sizing: border-box;
     margin: 0px;
-    padding: 0px;
-   
+    padding: 0px; 
 }
 
 h1,h2,h3,h4 {
@@ -17,20 +16,58 @@ h1,h2,h3,h4 {
 ul {
     list-style-type: none;
 }
+.gradient-background {
+    background: linear-gradient(
+      45deg,
+      #020782,
+      #4d0278,
+      black,
+      #250482,
+      #4a0970,
+      black,
+      #290b95,
+      hsl(0, 0%, 5%)
+    );
+    background-size: 1200% 1200%;
+    -webkit-animation: AnimationName 18s ease infinite;
+    -moz-animation: AnimationName 18s ease infinite;
+    -o-animation: AnimationName 18s ease infinite;
+    animation: AnimationName 18s ease infinite;
+  }
+  @-webkit-keyframes AnimationName {
+    0% {
+      background-position: 0% 44%;
+    }
+    50% {
+      background-position: 100% 57%;
+    }
+    100% {
+      background-position: 0% 44%;
+    }
+  }
+  @-moz-keyframes AnimationName {
+    0% {
+      background-position: 0% 44%;
+    }
+    50% {
+      background-position: 100% 57%;
+    }
+    100% {
+      background-position: 0% 44%;
+    }
+  }
+ 
 /* navbar ---------------------------- */
 nav {
     display: flex;
     position: fixed;
     width: 100%;
     height: 50px;
-    background: var(--linear-gradient);    
-    
+    background: var(--linear-gradient);     
 }
-.navbar-ul {
-    border: 2px solid yellow;
-    display: flex;    
-}
+
 .nav-item {
+    display: inline-block;
     padding-top: 7px;
     padding-right: 15px; 
 }
@@ -45,20 +82,16 @@ nav {
 }
 .nav-link:hover{
     transition: all 0.5s ease-in-out;
-    box-shadow: inset 10px 10px 35px rgba(232, 102, 236, 1), 0 0 20px 
+    box-shadow: inset 10px 10px 35px rgb(105, 2, 143), 0 0 20px 
     rgba(232, 102, 236, 1);
+    color: white;
 }
 /* main  */
-main {
-    background-color: black;
-}
 .container {
     display: flex;
     justify-content:center;
     align-items: center;
-    height: 100vh;
-   
-   
+    height: 100vh;  
 }
 /* header is hi i'm judith */
 h1{
@@ -67,14 +100,11 @@ h1{
 }
 
 .quote{ 
-    /* border: 2px solid white; */
     display: flex;
     flex-direction: column;
     height: 650px;
     width: 640px;
-    padding: 5px; 
-    /* border: 2px dotted green; */
- 
+    padding: 5px;  
 }
 h2,.name-quote,.quote {
     justify-content: center;
@@ -100,7 +130,6 @@ h2,.name-quote,.quote {
     padding-top: 25px;
 }
 
-
 /* About me-------------------------------- */
 .about-me p {
     font-family: var(--main-font-family);
@@ -108,19 +137,18 @@ h2,.name-quote,.quote {
     color: white;
     background: -webkit-linear-gradient(50.1deg,rgba(2,2,124), #ae67fa, #f49867);
     -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-    
+   -webkit-text-fill-color: transparent;   
 }
 
 section {
-    background-color: rgb(72, 2, 72);
+    
     align-items: center;
     align-content: space-around;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 100vh;
-    border: 2px solid rgb(128, 18, 18);   
+    height: 100vh; 
+    background-color: rgb(7, 7, 7); 
 }
 
 .about-me-title {
@@ -129,8 +157,6 @@ section {
     color: white;
     order: -1;
     flex: 0 1 250px;
-    border: 2px solid white;
- 
 }
 .about-me li {
     display: flex;
@@ -140,11 +166,10 @@ section {
     -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
     font-size: 35px;
-    border: 2px solid white;  
+    border-left: 2px solid rgb(154, 145, 145);  
 }
 
 .about-me{
-    border: 2px solid blue;
     display: flex;
 }
 /* Projects  */
@@ -156,9 +181,7 @@ section {
     justify-content:center;
     align-items: center;
     height: 100vh;
-    background-color: pink;
     gap: 15px;
-    border: 3px solid green;
     padding: 0 20px;
 }
 .flex-item {
@@ -166,7 +189,6 @@ section {
     justify-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    border: 3px dashed white; 
     padding: 2px;
     width: 32px;
     justify-content: center;
@@ -177,20 +199,18 @@ section {
 .project-one-two-box {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border: 3px dashed white; 
+    align-items: center; 
     height: 370px;
     padding: 2px;
     flex: 1 0 500px;
-    justify-content: center;
-    background-color: orange; 
+    justify-content: center;  
 }
 
 
 .project-3-5-box{
     flex: 1 0 300px;
     height: 300px;
-    background-color: red;
+  
 }
 
 .image {
@@ -221,7 +241,7 @@ section {
     font-family: var(--main-font-family);
     background-color: black;
     font-size: 20px;
-    border: 3px solid white;
+    border: 3px solid pink;
     border-radius: 10px;
     height: 70px;
     width: 150px;
@@ -236,7 +256,7 @@ section {
     font-family: var(--main-font-family);
     background-color: black;
     font-size: 20px;
-    border: 3px solid white;
+    border: 3px solid pink;
     border-radius: 10px;
     height: 70px;
     width: 150px;
@@ -250,7 +270,7 @@ section {
     height: 350px; 
     width: 500px;
     border-radius: 20px;
-    border: 2px solid red; 
+    border: 4px solid pink; 
 }  
 .image-project-3 {
     display: flex;
@@ -258,12 +278,11 @@ section {
     height: 290px; 
     width: 340px;
     border-radius: 20px;
-    border: 2px solid blue; 
 } 
 
 .image-project-3-5 {
     border-radius: 20px;
-    border: 2px solid white; 
+    border: 4px solid pink; 
 
 }
 
@@ -280,23 +299,19 @@ section {
 .contact-me-container {
     display: flex;
     height:100vh;
-    background-color: pink;
 }
 .contact-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: black;
     font-family: var(--main-font-family);
     height: 100vh;
     width: 925px;
     margin: auto;
-    border: 2px solid green;
   }
 
   form {
-    border: 7px solid rgb(71, 71, 69);
     width: 370px;
     display: block;
     margin: auto;
@@ -304,19 +319,17 @@ section {
     padding-right: 14px;
     padding-top: 10px;
     padding-bottom: 10px;
-    border: 2px solid yellow;
+    border: 2px solid pink;
   }
   .get-in-touch-title {
     font-size: 70px;
     padding-bottom: 20px;
   }
   .last-msg-box {
-    border: 2px solid white;
     height: 500px;
     width: 640px;
   }
   .one-of-my {
-    border: 2px solid purple;
     padding-top: 20px;
     padding-bottom: 30px;
     font-size: 30px;
@@ -346,14 +359,13 @@ section {
     margin: auto;
 }
   .btn  {
-    background-color: blue;
-    color: white;
+    background: var(--linear-gradient);
+    color: purple;
     font-size: 20px;
     width: 100px;
     border-radius: 20px;
     padding: 10px;
     font-family: var(--main-font-family);
-   
   }
 
  
@@ -378,11 +390,13 @@ section {
 IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT 
 /* screen sizes--------------------------------- */
 
+@media screen and (max-width: 992px) {
 
+}
 /* Tablets */
 @media screen and (max-width:768px){
     nav {
-        width: 100%;
+        width: 100%; 
         height: 75px; 
     }
     .nav-link {
@@ -399,7 +413,6 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
     }
 
     .about-me{
-        border: 2px solid blue;
         flex-direction: column;
     }
     /* Projects-------------------------- */
@@ -413,10 +426,7 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
         justify-content:center;
         align-items: center;
         height: 100vh;
-        background-color: pink;
-        gap: 1px;
-        border: 3px solid green;
-      
+        gap: 1px; 
     }
     /* project-images */
    
@@ -424,47 +434,36 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
         height: 300px;
         width: 300px; 
     }
-    /* .landing-page, .coming-soon {
-        height: 120px;
-        width: 300px; 
-    } */
-
     .project-one-two-box {
         display: flex;
         flex-direction: column;
         align-items: center;
-        border: 3px dashed white; 
         height: 280px;
-        flex: 0 0 320px;
+        flex: 0 0 300px;
         justify-content: center;
-        background-color: orange; 
+       
     }
     .project-3-5-box{
         display: flex;
         align-items: center;
-        border: 3px dashed white; 
         height: 280px;
         padding: 2px;
-        flex: 0 0 320px;
-        justify-content: center;
-        background-color: orange;
+        flex: 0 0 300px;
+        justify-content: center;  
     }
     
     .image-project-1-2, .image-project-3 {
         height: 280px; 
-        width: 320px;
-        border: 2px solid yellow; 
+        width: 300px;
     } 
     .image-project-3-5 {
         display: flex;
         height: 280px; 
-        width: 320px;
-        border: 2px solid yellow; 
+        width: 300px;
     }
     form {
         border: 7px solid rgb(71, 71, 69);
         width: 300px;
-        border: 2px solid yellow;
       }
     .button-box {
         padding-top: 30px;
@@ -473,7 +472,6 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
     }
 
     .one-of-my {
-    border: 2px solid purple;
     padding-top: 40px;
     padding-bottom: 70px;
     font-size: 30px;
@@ -517,7 +515,6 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
     }
 
     .about-me{
-        border: 2px solid blue;
         flex-direction: column;
     }
  
@@ -531,10 +528,7 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
         justify-content:center;
         align-items: center;
         height: 100vh;
-        background-color: pink;
         gap: 1px;
-        border: 3px solid green;
-      
     }
     /* project-images */
    
@@ -551,12 +545,10 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
         display: flex;
         flex-direction: column;
         align-items: center;
-        border: 3px dashed white; 
         height: 170px;
         padding: 2px;
         flex: 0 0 100px;
         justify-content: center;
-        background-color: orange; 
     }
     
     .image-project-1-2, .image-project-3, .image-project-3-5  {
@@ -565,12 +557,10 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
         position: absolute;
         height: 120px; 
         width: 300px;
-        border: 2px solid yellow; 
     }  
     
     .overlay-card  {
         font-size: 10px;
-        border: 2px solid white;
         padding-left: 10px;
         text-align: left;
         border-radius: 10px;
@@ -580,7 +570,6 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
     }
     .overlay-card-3 {
         font-size: 10px;
-        border: 2px solid white;
         padding-left: 10px;
         text-align: left;
         border-radius: 10px;
@@ -593,40 +582,31 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
         display: flex;
         height:100vh;
         width: 100%;
-        background-color: black;
     }
     .contact-box {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: black;
-        font-family: var(--main-font-family);
-        height: 100vh;
         width: 300px;
         margin: auto;
-        border: 2px solid green;
       }
       .get-in-touch-title {
         font-size: 50px;
         padding-bottom: 20px;
       }
       .last-msg-box {
-        border: 2px solid white;
         height: 500px;
         width: 300px;
       }
       .one-of-my {
-        border: 2px solid purple;
         padding-top: 20px;
         padding-bottom: 30px;
         font-size: 20px;
       }  
       form {
-        border: 7px solid rgb(71, 71, 69);
         width: 210px;
         height: 135px;
-        border: 2px solid yellow;
         align-content: center;
         padding-right: 2px;
       }
@@ -635,22 +615,17 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
         display: block;
         text-align: left;
         font-size: 15px;
-        padding: 3px;
-        color: rgba(183, 167, 167, 0.796);
-      } 
+        padding: 3px}
       .button-box {
         padding-top: 20px;
         width: 100px;
         margin: auto;
     }
       .btn  {
-        background-color: blue;
-        color: white;
         font-size: 15px;
         width: 80px;
         border-radius: 20px;
         padding: 5px;
-        font-family: var(--main-font-family);
       }
    
 }
