@@ -1,21 +1,27 @@
 :root {
     --main-font-family: 'Poiret One', sans-serif;
-    --linear-gradient:linear-gradient(45deg, purple, pink,blue);
+    --linear-gradient:linear-gradient(45deg, pink,purple,blue);
 }
 *, body {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px; 
 }
+ul {
+    list-style-type: none;
+}
+h1{
+    font-family:'Philosopher', sans-serif;
+    font-size: 70px;  
+}
 
-h1,h2,h3,h4 {
+/* -----colors---------- */
+h1,h2,h3,h4,p,li {
     background: -webkit-linear-gradient(50.1deg,rgba(2,2,124), #ae67fa, #f49867);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
-ul {
-    list-style-type: none;
-}
+
 .gradient-background {
     background: linear-gradient(
       45deg,
@@ -57,10 +63,11 @@ ul {
     }
   }
  
-/* navbar ---------------------------- */
+/* navbar --------------------------*/
 nav {
     display: flex;
     position: fixed;
+    justify-content: flex-end;
     width: 100%;
     height: 50px;
     background: var(--linear-gradient);     
@@ -69,36 +76,29 @@ nav {
 .nav-item {
     display: inline-block;
     padding-top: 7px;
-    padding-right: 15px; 
+    padding-right: 15px;
+    
 }
-
 .nav-link {
     font-family: var(--main-font-family);
     text-decoration: none;
-    color: purple;
     font-size: 25px;
     padding-left: 10px;
   
 }
 .nav-link:hover{
     transition: all 0.5s ease-in-out;
-    box-shadow: inset 10px 10px 35px rgb(105, 2, 143), 0 0 20px 
+    box-shadow: inset 10px 10px 35px rgb(102, 37, 232), 0 0 20px 
     rgba(232, 102, 236, 1);
-    color: white;
+    border-radius: 10px;
 }
-/* main  */
+/* main----------------------*/
 .container {
     display: flex;
     justify-content:center;
     align-items: center;
     height: 100vh;  
 }
-/* header is hi i'm judith */
-h1{
-    font-family:'Philosopher', sans-serif;
-    font-size: 70px;  
-}
-
 .quote{ 
     display: flex;
     flex-direction: column;
@@ -113,9 +113,6 @@ h2,.name-quote,.quote {
     line-height: 1.3;
     text-align: center;
     font-size: 40px;
-    background: -webkit-linear-gradient(50.1deg,rgba(2,2,124), #ae67fa, #f49867);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 } 
 
 .bio-image {
@@ -130,18 +127,8 @@ h2,.name-quote,.quote {
     padding-top: 25px;
 }
 
-/* About me-------------------------------- */
-.about-me p {
-    font-family: var(--main-font-family);
-    font-size: 45px;
-    color: white;
-    background: -webkit-linear-gradient(50.1deg,rgba(2,2,124), #ae67fa, #f49867);
-    -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;   
-}
-
+/* --About-------------------------------- */
 section {
-    
     align-items: center;
     align-content: space-around;
     display: flex;
@@ -150,30 +137,26 @@ section {
     height: 100vh; 
     background-color: rgb(7, 7, 7); 
 }
-
-.about-me-title {
-    display: column;
-    font-size: 50px;
-    color: white;
-    order: -1;
-    flex: 0 1 250px;
+.about-me{
+    display: flex;
 }
+
+.about-me p {
+    font-family: var(--main-font-family);
+    font-size: 45px;
+    color: white;
+}
+
 .about-me li {
     display: flex;
     color: white;
     font-family: var(--main-font-family);
-    background: -webkit-linear-gradient(50.1deg,rgba(2,2,124), #ae67fa, #f49867);
-    -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
     font-size: 35px;
     border-left: 2px solid rgb(154, 145, 145);  
 }
 
-.about-me{
-    display: flex;
-}
-/* Projects  */
 
+/* Projects----------------------------*/
 .projects-container {
     display: flex;
     flex-direction: row;
@@ -184,6 +167,7 @@ section {
     gap: 15px;
     padding: 0 20px;
 }
+
 .flex-item {
     display: flex;
     justify-items: center;
@@ -195,7 +179,6 @@ section {
     margin: auto; 
     font-size: 40px;
 }
-
 .project-one-two-box {
     display: flex;
     flex-direction: column;
@@ -205,14 +188,11 @@ section {
     flex: 1 0 500px;
     justify-content: center;  
 }
-
-
 .project-3-5-box{
     flex: 1 0 300px;
     height: 300px;
   
 }
-
 .image {
     display: flex;
     margin-bottom: 0;
@@ -233,69 +213,61 @@ section {
     width: 340px;
 }
 
-/* overlay cards */
+/* overlay cards ------------------*/
+.overlay-card, .overlay-card-3 {
+    align-self:flex-start;
+    color: white;
+    font-weight: bold;
+    font-family: var(--main-font-family);
+    background-color: black;
+    font-size: 20px;
+    border: 3px solid pink;
+    border-radius: 10px;
+    height: 70px;
+    width: 150px;
+    padding-left: 5px;
+    text-align: left;
+}
+
 .overlay-card {
-    align-self:flex-start;
-    color: white;
-    font-weight: bold;
-    font-family: var(--main-font-family);
-    background-color: black;
-    font-size: 20px;
-    border: 3px solid pink;
-    border-radius: 10px;
-    height: 70px;
-    width: 150px;
     margin-top: -150px;
-    padding-left: 5px;
-    text-align: left;
 }
-.overlay-card-3{
-    align-self:flex-start;
-    color: white;
-    font-weight: bold;
-    font-family: var(--main-font-family);
-    background-color: black;
-    font-size: 20px;
-    border: 3px solid pink;
-    border-radius: 10px;
-    height: 70px;
-    width: 150px;
+
+.overlay-card-3 {
     margin-top: -120px;
-    padding-left: 5px;
-    text-align: left;
 }
-.image-project-1-2 {
+
+.image-project-1-2, .image-project-3 {
     display: flex;
     flex-direction: column;
+    border-radius: 20px;  
+}  
+.image-project-1-2 {
+    border: 4px solid pink; 
     height: 350px; 
     width: 500px;
-    border-radius: 20px;
-    border: 4px solid pink; 
-}  
+}
 .image-project-3 {
-    display: flex;
-    flex-direction: column;
     height: 290px; 
     width: 340px;
-    border-radius: 20px;
-} 
+}
+
 
 .image-project-3-5 {
     border-radius: 20px;
     border: 4px solid pink; 
-
 }
 
 .zoom {
     background-color: green;
-    transition: transform .2s; /* Animation */
-  }
+    transition: transform .2s; 
+}
   
-  .zoom:hover {
-    transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
+.zoom:hover {
+    transform: scale(1.3); 
+}
 
-/* CONTACT ME SECTION-------------------- */
+/* Contact me ------------------------ */
 .contact-me-container {
     display: flex;
     height:100vh;
@@ -311,7 +283,7 @@ section {
     margin: auto;
   }
 
-  form {
+form {
     width: 370px;
     display: block;
     margin: auto;
@@ -320,36 +292,33 @@ section {
     padding-top: 10px;
     padding-bottom: 10px;
     border: 2px solid pink;
-  }
-  .get-in-touch-title {
+}
+.get-in-touch-title {
     font-size: 70px;
     padding-bottom: 20px;
   }
-  .last-msg-box {
+.last-msg-box {
     height: 500px;
     width: 640px;
   }
-  .one-of-my {
+.one-of-my {
     padding-top: 20px;
     padding-bottom: 30px;
     font-size: 30px;
   }
-  ul {
-    list-style-type: none;
+.labels {
     margin: auto;
     padding-top: 5px;
   }
-  li {
+.labels > li {
     display: block;
     text-align: center;
     font-size: 20px;
     padding: 3px;
     padding-left: 5px;
     padding-right: 10px;
-    color: rgba(183, 167, 167, 0.796);
   } 
  
-
 .button-box {
     display: flex;
     align-self: center;
@@ -358,20 +327,17 @@ section {
     width: 220px;
     margin: auto;
 }
-  .btn  {
+.btn  {
     background: var(--linear-gradient);
-    color: purple;
+    font-family: var(--main-font-family);
+    color: black;
     font-size: 20px;
     width: 100px;
     border-radius: 20px;
     padding: 10px;
-    font-family: var(--main-font-family);
-  }
+}
 
- 
-
-  /* FOOTER SECTION ------------------------ */
-
+/* FOOTER------------------------ */
 .footer-box {
     display: flex;
     background-color: black;
@@ -379,31 +345,34 @@ section {
     width: 100%;
     margin: auto;
 }
-
 .footer {
     color: white;
     margin: auto;
+    font-family: var(--main-font-family);
 }
 
 
-
-IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT 
-/* screen sizes--------------------------------- */
-
-@media screen and (max-width: 992px) {
-
-}
+/* IMPORTANT screen sizes--------------------------------- */
 /* Tablets */
 @media screen and (max-width:768px){
     nav {
-        width: 100%; 
-        height: 75px; 
+        width: 100%;
+        height: 75px;
+        justify-content: center; 
     }
     .nav-link {
         color: purple;
         font-size: 35px; 
     }
-      /* about me -----------------------*/
+    /* about me -----------------------*/
+    section {
+        flex-direction: column;
+    }
+    .about-me{
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 40px;
+    }
     .about-me p{
         font-size: 30px;
         line-height: 1.5;
@@ -411,11 +380,7 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
     .about-me li {
         font-size: 28px;
     }
-
-    .about-me{
-        flex-direction: column;
-    }
-    /* Projects-------------------------- */
+    /* Projects--------------------- */
     .projects-container {
         gap: 1px;     
     }
@@ -426,32 +391,24 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
         justify-content:center;
         align-items: center;
         height: 100vh;
-        gap: 1px; 
+        gap: 1px;
     }
     /* project-images */
-   
-    .horiseon, .snippet, .landing-page, .coming-soon{
-        height: 300px;
-        width: 300px; 
-    }
-    .project-one-two-box {
+    .project-one-two-box, .project-3-5-box {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: 280px;
         flex: 0 0 300px;
-        justify-content: center;
-       
-    }
-    .project-3-5-box{
-        display: flex;
-        align-items: center;
-        height: 280px;
-        padding: 2px;
-        flex: 0 0 300px;
         justify-content: center;  
     }
-    
+    .project-3-5-box {
+        padding: 2px;
+    }
+    .horiseon, .snippet, .landing-page, .coming-soon{
+        height: 300px;
+        width: 300px; 
+    }
     .image-project-1-2, .image-project-3 {
         height: 280px; 
         width: 300px;
@@ -470,14 +427,12 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
         width: 100px;
         margin: auto;
     }
-
     .one-of-my {
     padding-top: 40px;
     padding-bottom: 70px;
     font-size: 30px;
     }
 } 
-
 /* small smarthphones --------------------------------------*/
 @media screen and (max-width:576px){
     nav {
@@ -497,7 +452,6 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
     .bio-image{
        width: 150px;
        height: 150px;
-
     }
     .quote{ 
         padding: 10px;   
@@ -506,6 +460,9 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
         font-size: 50px;
     }
     /* about me -----------------------*/
+    .about-me{
+        flex-direction: column;
+    }
     .about-me p{
         font-size: 28px;
         line-height: 1.2;
@@ -513,15 +470,7 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
     .about-me li {
         font-size: 22px;
     }
-
-    .about-me{
-        flex-direction: column;
-    }
- 
     /* projects -----------------------*/
-    .projects-container {
-        gap: 1px;     
-    }
     .projects-container {
         display: flex;
         flex-direction: column;
@@ -530,17 +479,6 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
         height: 100vh;
         gap: 1px;
     }
-    /* project-images */
-   
-    .horiseon, .snippet{
-        height: 150px;
-        width: 300px; 
-    }
-    .landing-page, .coming-soon {
-        height: 120px;
-        width: 300px; 
-    }
-
     .project-one-two-box, .project-3-5-box {
         display: flex;
         flex-direction: column;
@@ -550,7 +488,16 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
         flex: 0 0 100px;
         justify-content: center;
     }
-    
+    /* project-images */
+    .horiseon, .snippet{
+        height: 150px;
+        width: 300px; 
+    }
+    .landing-page, .coming-soon {
+        height: 120px;
+        width: 300px; 
+    }
+
     .image-project-1-2, .image-project-3, .image-project-3-5  {
         display: flex;
         flex-direction: column;
@@ -558,7 +505,6 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
         height: 120px; 
         width: 300px;
     }  
-    
     .overlay-card  {
         font-size: 10px;
         padding-left: 10px;
@@ -591,44 +537,41 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
         width: 300px;
         margin: auto;
       }
-      .get-in-touch-title {
+    .get-in-touch-title {
         font-size: 50px;
         padding-bottom: 20px;
       }
-      .last-msg-box {
+    .last-msg-box {
         height: 500px;
         width: 300px;
       }
-      .one-of-my {
+    .one-of-my {
         padding-top: 20px;
         padding-bottom: 30px;
         font-size: 20px;
       }  
-      form {
+    form {
         width: 210px;
         height: 135px;
         align-content: center;
         padding-right: 2px;
         border: 2px solid pink;
-      }
-
-      li {
+     }
+    li {
         display: block;
         text-align: left;
         font-size: 15px;
         padding: 3px;
     }
-
-      .button-box {
+    .button-box {
         padding-top: 20px;
         width: 100px;
         margin: auto;
     }
-      .btn  {
+    .btn  {
         font-size: 15px;
         width: 80px;
         border-radius: 20px;
         padding: 5px;
-      }
-   
+    }
 }
