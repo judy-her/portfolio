@@ -1,4 +1,4 @@
-# portfolio
+# Portfolio
 A Portfolio of Projects
 
 ## Description 
@@ -10,6 +10,8 @@ N/A
 
 ## Usage 
 To view the different items in this Portfolio website, simply navigate through the navbar where you can click to the HOME, ABOUT, PROJECTS, or CONTACT section. TO view the projects live on the website, simply click on the image of the project. You can click on this link for full website access.  
+
+![Screenshot of Portfolio Website]
 
 ## Credits
 N/A
