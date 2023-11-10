@@ -462,7 +462,7 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
         width: 300px;
     }
     form {
-        border: 7px solid rgb(71, 71, 69);
+        border: 3px solid pink;
         width: 300px;
       }
     .button-box {
@@ -609,13 +609,16 @@ IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
         height: 135px;
         align-content: center;
         padding-right: 2px;
+        border: 2px solid pink;
       }
 
       li {
         display: block;
         text-align: left;
         font-size: 15px;
-        padding: 3px}
+        padding: 3px;
+    }
+
       .button-box {
         padding-top: 20px;
         width: 100px;
