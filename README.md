@@ -9,7 +9,7 @@ This website is a virtual portfolio containing deployed samples of my projects a
 N/A
 
 ## Usage 
-To view the different items in this Portfolio website, simply navigate through the navbar where you can click to the HOME, ABOUT, PROJECTS, or CONTACT section. TO view the projects live on the website, simply click on the image of the project. You can click on this link for full website access.  
+To view the different items in this Portfolio website, simply navigate through the navbar where you can click to the HOME, ABOUT, PROJECTS, or CONTACT section. TO view the projects live on the website, simply click on the image of the project. You can click on this link for full website access. https://judy-her.github.io/portfolio/
 
 
 ![Screenshot of Portfolio Website](assets/images/Screenshot-Profile-2.png)
